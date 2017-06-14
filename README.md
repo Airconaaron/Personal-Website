@@ -1,2 +1,2 @@
 # Personal-Website
-Attemping to make a [website](aaronpang.xyz)
+Attemping to make a [website](http://aaronpang.xyz)
