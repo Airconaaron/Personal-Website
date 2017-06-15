@@ -347,7 +347,7 @@ fieldset[disabled] .btn-default.active {
   background-color: #222222;
 }
 .btn-primary {
-  color: white;
+  color: #2196f3;
   /*background-color: #F05F40;*/
   background-color: #2196f3;
   /*border-color: #F05F40;*/
@@ -362,9 +362,9 @@ fieldset[disabled] .btn-default.active {
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
-  color: white;
-  background-color: #ee4b28;
-  border-color: #ed431f;
+  color: black;
+  background-color: black;
+  border-color: black;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -409,7 +409,7 @@ fieldset[disabled] .btn-primary.active {
   text-transform: uppercase;
 }
 .btn-xl {
-  padding: 15px 30px;
+  padding: 15px 15px;
 }
 ::-moz-selection {
   color: white;
@@ -436,4 +436,8 @@ body {
     float: none;
     margin: 0 auto;
 }
+.fa-chevron-down {
+  color: white;
+}
+.navbar {  border: none!important; }
 
