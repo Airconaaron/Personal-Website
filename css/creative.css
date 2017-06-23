@@ -447,10 +447,23 @@ body {
 .profile-pic{
   width:60%;
   height: 50%;
-  max-width:400px;
+  max-width:300px;
   margin:auto auto 50px;
   border-radius:50%;
   border-color:white;
   border-style:solid;
-  border-width:medium}
+  border-width:medium
+}
+.links{
+  color: white;
+  font-size:6em;
+}
+.links:hover{
+  color:grey;
+  font-size: 6.3em;
+  transition: 1s ease-out;
+}
+.link-text{
+  color: #2196f3;
+}
 
