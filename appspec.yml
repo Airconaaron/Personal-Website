@@ -3,7 +3,7 @@ os: linus
 files:
   - source: /
   - destination:/var/www/html
-permissions:
-  permissions-specifications
-hooks:
-  deployment-lifecycle-event-mappings
+# permissions:
+#   permissions-specifications
+# hooks:
+#   deployment-lifecycle-event-mappings
