@@ -14,6 +14,9 @@
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+    <!-- FORM CSS -->
+    <link rel="stylesheet" href="css/form.css">
+
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -53,9 +56,9 @@
                     <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
-                    <li>
+<!--                     <li>
                         <a class="page-scroll" href="#skills">Skills</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a class="page-scroll" href="#projects">Projects</a>
                     </li>
@@ -71,12 +74,15 @@
 
     <header>
         <div class="header-content">
+<!--         <div class="row"></div>
+        <div class="row"></div> -->
         <div class="row">
-            <div class="header-content-inner" col-md-8 col-md-offset-2>
+            <div class="header-content-inner">
 <!--                 <h1 id="homeHeading">Hello There !</h1>
                 <hr>
                 <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p> -->
-                <a href="#about" class="btn btn-xl btn-primary  page-scroll"> <i class="fa fa-2x fa-chevron-down text-primary sr-icons"></i></a>
+                <div class="height-lower"> <p> </p></div>
+                <a href="#about" class="btn btn-xl btn-primary  page-scroll"> <i class="fa fa-2x fa-chevron-down text-primary"></i></a>
             </div>
         </div>
         </div>
@@ -93,13 +99,48 @@
                     <img src="img/profile_1.png" alt="profile" class="img-circle img-responsive img-centered profile-pic">
                     <p class="text-faded">My name is Aaron Pang and I'm a <a href="https://www.yale-nus.edu.sg/curriculum/majors/mathematical-computational-and-statistical-sciences/" title="Major Link"> <font color="white"> Computer Science Major</font></a> at 
                     <a href="https://www.yale-nus.edu.sg" title="Major Link"> <font color="white">Yale-NUS College </font> </a> in Singapore. I'm a developer and avid cyclist from Vancouver and Hong Kong with keen interest in all things tech.</p>
-                    <a href="#skills" class="page-scroll btn btn-default btn-xl sr-button">Find Out More</a>
+                    <!-- <a href="#skills" class="page-scroll btn btn-default btn-xl sr-button">Find Out More</a> -->
                 </div>
             </div>
         </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Links</h2>
+                        <hr class="light">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-8 text-center">
+                        <div class="service-box">
+                            <a href="https://github.com/Airconaaron?tab=activity" target="_blank"><i class="fa fa-4x fa-github-square  text-primary sr-icons links"></i></a>
+                            <h3 class = "link-text">GitHub</h3>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-8 text-center">
+                        <div class="service-box">
+                            <a href="https://www.linkedin.com/in/aaron-pang-725892115/" target="_blank"><i class="fa fa-4x fa-linkedin-square text-primary sr-icons links"></i></a>
+                            <h3 class = "link-text">LinkedIn</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-8 text-center">
+                        <div class="service-box">
+                            <a href="/img/Aaron_Pang_resume.pdf" target="_blank"><i class="fa fa-4x fa-file-pdf-o text-primary sr-icons links"></i></a>
+                            <h3 class = "link-text">Résumé</h3>
+                        </div>
+                    </div>
+                    <!-- <a href="#skills" class="page-scroll btn btn-default btn-xl sr-button">Find Out More</a> -->
+<!--                     <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <a href="#skills" class="page-scroll btn btn-default btn-xl sr-button">Find Out More</a>
+                    </div> -->
+                </div>
+
+        </div>
     </section>
 
-    <section id="skills">
+    <!-- <section id="skills">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -140,7 +181,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="no-padding" id="projects">
         <div class="container-fluid">
@@ -177,14 +218,14 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
+                        <img src="img/portfolio/thumbnails/Bikes_export.jpg" class="img-responsive thumbnail-img" alt="Bicycles Image">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
                                     Category
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Bicycles
                                 </div>
                             </div>
                         </div>
@@ -239,7 +280,7 @@
         </div>
     </section>
 
-    <aside class="bg-dark">
+   <!--  <aside class="bg-dark">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -250,6 +291,7 @@
         </div>
             <div class="container">
                 <div class="row">
+                <div class="height-lower-2"> <p> </p></div>
                     <div class="col-lg-4 col-md-8 text-center">
                         <div class="service-box">
                             <a href="https://github.com/Airconaaron?tab=activity" target="_blank"><i class="fa fa-4x fa-github-square  text-primary sr-icons links"></i></a>
@@ -272,7 +314,7 @@
                 </div>
 
         </div>
-    </aside>
+    </aside> -->
  
 <section id="contact">
         <div class="container">
@@ -282,17 +324,42 @@
                     <hr class="primary">
                     <p>Want to work together on a project? Just contact me below.</p>
                 </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
+<!--                 <div class="col-lg-4 col-lg-offset-2 text-center">
                     <i class="fa fa-phone fa-3x sr-contact"></i>
                     <p>+65 8452 0896</p>
                 </div>
                 <div class="col-lg-4 text-center">
                     <i class="fa fa-envelope-o fa-3x sr-contact"></i>
                     <p><a href="mailto:aaron.pang@u.yale-nus.edu.sg">aaron.pang@u.yale-nus.edu.sg</a></p>
-                </div>
+                </div> -->
             </div>
         </div>
-    </section>
+            <div class="row">
+             <div class="col-lg-8 col-lg-offset-2 text-center">
+                <form class="go-right" id ="ajax-contact" method ="POST" action="mailer.php">
+                  <div>
+                    <input id="name" name="name" type="text" placeholder="Name" required>
+                    <label for="name"><i class="fa fa-user text-primary links form-icn"></i></label>
+                  </div>
+<!--                   <div>
+                    <input id="phone" name="phone" type="tel" placeholder="Phone" required>
+                    <label for="phone"><i class="fa fa-phone -o text-primary links form-icn"></i></label>
+                  </div> -->
+                  <div>
+                    <input id="email" name="email" type="email" placeholder="Email" required>
+                    <label for="phone"><i class="fa fa-envelope text-primary links form-icn"></i></label>
+                  </div>
+                  <div>
+                    <textarea id="message" name ="message" type="text" placeholder="Message" class="form-text" required></textarea>
+                    <!-- <label for="message"><i class="fa fa-4x fa-file-pdf-o text-primary sr-icons links"></i></label> -->
+                  </div>
+                  <input id="submit" type="submit" value="GO!">
+                </form>
+            </div>
+        </div>
+
+
+</section>
 
 <footer>
     <div class="container text-center">

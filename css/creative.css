@@ -195,6 +195,9 @@ header .header-content .header-content-inner p {
   font-size: 16px;
   margin-bottom: 50px;
 }
+.height-lower{
+  min-height: 550px;
+}
 @media (min-width: 768px) {
   header {
     min-height: 100%;
@@ -457,16 +460,26 @@ body {
 .links{
   color: white;
   font-size:6em;
+  position: relative;
 }
 .links:hover{
-  color:grey;
-  font-size: 6.3em;
+  /*color:grey;*/
+  /*transform: scale(2);*/
+  /*font-size: 6.5em;*/
+  color: rgba(255, 255, 255, 0.75);
+  opacity: 0.2;
   transition: 1s ease-out;
 }
 .link-text{
-  color: #2196f3;
+  /*color: #2196f3;*/
+  color: white;
+}
+.height-lower-2{
+  min-height: 70px;
+}
+.height-lower-2:hover {
+  min-height: 70px;
 }
 #about{
   background-color: #0088cc;
 }
-

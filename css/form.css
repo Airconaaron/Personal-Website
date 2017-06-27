@@ -1,0 +1,150 @@
+
+form {
+  position: relative;
+  width: 500px;
+  margin: 50px auto 100px auto;
+}
+
+input {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.875em;
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+  
+  background: transparent;
+  outline: none;
+  color: black;
+  
+  border: solid 1px #222;
+  border-bottom: none;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+  background: black;
+  color: black;
+}
+
+textarea {
+  width: 470px;
+  max-width: 470px;
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+  
+  background: transparent;
+  outline: none;
+  
+  color: black;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.875em;
+  
+  border: solid 1px #222;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+  background: black;
+  color: black;
+}
+
+#submit {
+  width: 500px;
+  
+  padding: 0;
+  margin: -5px 0px 0px 0px;
+  
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.875em;
+  color: #b3aca7;
+  
+  outline:none;
+  cursor: pointer;
+  
+  border: solid 1px #b3aca7;
+  border-top: none;
+}
+
+
+#submit:hover {
+  color: #e2dedb;
+}
+
+/*other*/
+* {
+  box-sizing: border-box;
+}
+
+form > div {
+  position: relative;
+  overflow: hidden;
+}
+label {
+  opacity: 0.5;
+}
+form input, form textarea {
+  width: 100%;
+  border: 2px solid gray;
+  background: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 8px 12px;
+  outline: 0;
+}
+form input:valid, form textarea:valid {
+  background: white;
+}
+form input:focus, form textarea:focus {
+  border-color: black;
+}
+form input:focus + label, form textarea:focus + label {
+  background: #2196f3;
+  color: white;
+  font-size: 70%;
+  padding: 1px 6px;
+  z-index: 2;
+  text-transform: uppercase;
+}
+form label {
+  transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
+  position: absolute;
+  color: green;
+  padding: 7px 6px;
+}
+form textarea {
+  display: block;
+  resize: vertical;
+}
+
+form.go-right label {
+  top: 2px;
+  right: 100%;
+  width: 100%;
+  margin-right: -100%;
+  bottom: -3px;
+  opacity: 0;
+}
+form.go-right input:focus + label, form.go-right textarea:focus + label {
+  right: 0;
+  margin-right: 0;
+  width: 10%;
+  padding-top: 5px;
+  opacity: 1;
+}
+i.form-icn{
+  font-size: 30px;
+}
+form.text {
+  width: 600px ;
+}
