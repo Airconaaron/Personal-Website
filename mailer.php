@@ -1,4 +1,5 @@
 <?php
+    require 'vendor/autoload.php';
 
     // Only process POST reqeusts.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {

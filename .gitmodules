@@ -1,0 +1,3 @@
+[submodule "projects/gMapsHeatMapWidget"]
+	path = projects/gMapsHeatMapWidget
+	url = https://github.com/Airconaaron/gMapsHeatMapWidget
