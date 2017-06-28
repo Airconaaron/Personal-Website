@@ -35,8 +35,6 @@
         if (mail($recipient, $subject, $email_content, $email_headers)) {
             // Set a 200 (okay) response code.
             http_response_code(200);
-            // echo "Thank You! Your message has been sent.";
-            // echo file_get_contents("/thanks.html");
             header("Location: thanks.html");
             die();
         } else {
