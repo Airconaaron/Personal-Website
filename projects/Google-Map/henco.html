@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Qhubeka Test</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<!-- Lightweight Calendar -->
+	<script src="pikaday.js"></script>
+
+	<script src="jquery-csv.js"></script>
+	<link rel="stylesheet" type="text/css" href="pikaday.css">
+	<!-- Useful Pairing tool -->
+	<style type="text/css">
+		html, body {
+			font-family: Helvetica, sans-serif;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+      #map {
+        bottom:0px;
+        height: 100%;
+        left: 20em;
+        position: absolute;
+        right: 0px;
+      }
+		#datepair {
+			position: relative;
+
+		}
+		input {
+			margin: 1em;
+		}
+		h1 {
+			margin: auto;
+			padding: 1em;
+			font: Arial, sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+<!-- 	<input type="file" id="fileInput"/ value="Upload CSV">
+-->
+	<!-- Initialize the Widget -->
+	<p id="datePair">
+		<h1>Select Your Dates</h1>
+		<p> (there's only data for summer 2016)</p>
+	    <input type="text" class="date start" id="start"/>to
+	    <input type="text" class="date end" id="end"/>
+	</p>
+	<input type="button" id="clickt" name="press me" title="click"/ value="Run"> 
+ 	<div id="map"></div>
+
+   <script>
+   // Random Stuff
+    var map;
+    var marker;
+    var dataArr;
+    // Distances travelled between intervals specified
+    var Distances = [];
+    var latLNGArrs = [];
+    	//Widgets
+       	var pickStart = new Pikaday({
+       		field: document.getElementById('start'), 
+       		defaultDate: null, 
+       		onSelect: function() {
+       			//Since fucking date Pair sucks ass we'll use this
+        		pickEnd.setMinDate(this.getDate());
+        		pickEnd.setDate(this.getDate());
+        	}
+        });
+		var pickEnd = new Pikaday({
+			field: document.getElementById('end'), 
+			defaultDate: null,    
+			onSelect: function() {
+        		pickStart.setMaxDate(this.getDate());
+        	}
+        });
+
+    var mapOtions = {
+			center: {lat: -25.3590764, lng: 26.3690531},
+			zoom: 13
+		};
+	$("document").ready(function () {
+		$.ajax("Mechanics Data/Data.csv", 
+			{success: changeToCSV,type: "GET", dataType: "text"});
+	});
+
+	function changeToCSV(data) {
+		dataArr = $.csv.toObjects(data);
+		return(dataArr)
+	};
+     // TODO: Complete the following function to initialize the map
+		function initMap() {
+			$("#clickt").on('click',function(){
+
+		if (pickEnd.getDate() == null || pickStart.getDate() == null) {
+			alert("Pick Damn Dates");
+			initMap();
+		};
+		var startDate = pickStart.getDate();
+		var endDate = pickEnd.getDate();
+
+		for (var i = 0; i < dataArr.length; i++){
+			var date = new Date(dataArr[i].Time );
+			if (date >= startDate && date <=endDate) {
+			var loc = dataArr[i].LLC;
+			var locArr = loc.split(",");
+			var Distance = Number(dataArr[i].Mileage);
+			var latLNGArr = new google.maps.LatLng({lat: Number(locArr[0]), lng: Number(locArr[1])});
+			//var x = latLNGArr.lng;
+			//alert(x);
+			latLNGArrs.push(latLNGArr);
+			Distances.push(Distance);
+		};
+
+		var bounds = new google.maps.LatLngBounds();
+		var newCenter;
+
+		for (var j = 0; j < latLNGArrs.length; j++) {
+			bounds.extend(latLNGArrs[j])
+		};
+
+		//console.log(Distance);
+		newCenter = bounds.getCenter();
+		mapOtions.center = newCenter;
+			// } else {
+			// 	break;
+			// };
+		};
+				    //load map and shit
+			map = new google.maps.Map(document.getElementById('map'), 
+				mapOtions);
+			map.fitBounds(bounds);
+			var heatmap = new google.maps.visualization.HeatmapLayer({
+		      data: latLNGArrs,
+		      dissipating: true,
+		      map: map
+
+		    });
+		    //Resets this shit hopefull
+		      latLNGArrs = [];
+	 });
+
+		};
+   </script>
+   <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDT7bLxdxvLVueoKXiPk_jHpsWjUehtn9g&v=3&libraries=geometry,visualization&callback=initMap">
+   </script>
+
+</body>
+</html>
