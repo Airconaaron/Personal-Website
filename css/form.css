@@ -138,6 +138,7 @@ form.go-right label {
   bottom: -3px;
   opacity: 0;
 }
+
 form.go-right input:focus + label, form.go-right textarea:focus + label {
   right: 0;
   margin-right: 0;
