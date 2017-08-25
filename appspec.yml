@@ -10,3 +10,4 @@ files:
 #   permissions-specifications
 # hooks:
 #   deployment-lifecycle-event-mappings
+# remember the coolest thing here is that you can set it to run certain commands before and after a deployment
